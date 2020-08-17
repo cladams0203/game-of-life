@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GridContainer } from "../styles/mainStyles";
 import Cells from "./Cells";
 
@@ -17,6 +17,8 @@ const testArray = [
 
 function Grid() {
   const [grid, setGrid] = useState(testArray);
+  const [timer, setTimer] = useState(false);
+  const [toggle, setToggle] = useState(false);
   let newGrid = [];
   console.log(newGrid);
   const handleChange = (pos1, pos2) => {
@@ -192,6 +194,16 @@ function Grid() {
     setGrid(newGrid);
   };
 
+  useEffect(() => {
+    if (timer) {
+      setTimeout(() => {
+        algorithm();
+        setToggle(!toggle);
+      }, 500);
+    }
+  }, [toggle, timer]);
+  console.log(toggle, timer);
+
   return (
     <>
       <GridContainer>
@@ -212,7 +224,8 @@ function Grid() {
           });
         })}
       </GridContainer>
-      <button onClick={algorithm}> Test Logic </button>
+      <button onClick={() => setTimer(true)}> Test Logic </button>
+      <button onClick={() => setTimer(false)}>Stop</button>
     </>
   );
 }
