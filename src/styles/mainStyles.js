@@ -16,8 +16,10 @@ export const GridContainer = styled.div`
   /* width: 50%; */
 `;
 export const Cell = styled.div`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+  /* width: ${(props) => props.width};
+  height: ${(props) => props.height}; */
+  width: 10px;
+  height: 10px;
   background-color: ${(props) => props.background};
   border: solid lightgray;
   border-width: thin;
