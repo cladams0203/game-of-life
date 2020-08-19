@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { useStateValue } from "react-conflux";
 import { gridContext } from "../store/contexts";
-import { largeBoard, extraLargeBoard, RESET_GAME } from "../store/gridActions";
+import {
+  largeBoard,
+  extraLargeBoard,
+  RESET_GAME,
+  random,
+} from "../store/gridActions";
 
 function Controls({ setTimer }) {
   const [state, dispatch] = useStateValue(gridContext);
@@ -32,6 +37,7 @@ function Controls({ setTimer }) {
       >
         Reset
       </button>
+      <button onClick={() => random(dispatch, state.grid)}>Randomize</button>
       <form onSubmit={handleSubmit}>
         <label htmlFor="size">
           Select a Size:

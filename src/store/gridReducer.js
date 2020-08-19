@@ -4,6 +4,7 @@ import {
   RESET_GAME,
   EXTRA_LARGE_BOARD,
   ADD_PRESET,
+  RANDOM,
 } from "./gridActions";
 
 const initialState = {
@@ -59,6 +60,13 @@ export const gridReducer = (state = initialState, action) => {
       return {
         ...state,
         grid: action.payload,
+        loading: false,
+      };
+    case RANDOM:
+      return {
+        ...state,
+        grid: action.payload,
+        loading: false,
       };
     default:
       return state;
