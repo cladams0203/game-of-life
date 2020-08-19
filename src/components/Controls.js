@@ -24,7 +24,14 @@ function Controls({ setTimer }) {
     <div>
       <button onClick={() => setTimer(true)}>Start</button>
       <button onClick={() => setTimer(false)}>Stop</button>
-      <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+      <button
+        onClick={() => {
+          setForm("normal");
+          dispatch({ type: RESET_GAME });
+        }}
+      >
+        Reset
+      </button>
       <form onSubmit={handleSubmit}>
         <label htmlFor="size">
           Select a Size:

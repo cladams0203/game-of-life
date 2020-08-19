@@ -13,13 +13,12 @@ export const GridContainer = styled.div`
   grid-template-columns: auto auto;
   border: 2px solid black;
   background-color: black;
-  /* width: 50%; */
+  width: ${(props) => props.width};
 `;
+
 export const Cell = styled.div`
-  /* width: ${(props) => props.width};
-  height: ${(props) => props.height}; */
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background-color: ${(props) => props.background};
   border: solid lightgray;
   border-width: thin;
