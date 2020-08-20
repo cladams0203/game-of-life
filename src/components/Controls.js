@@ -38,7 +38,7 @@ function Controls({ setTimer }) {
         Reset
       </button>
       <button onClick={() => random(dispatch, state.grid)}>Randomize</button>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label htmlFor="size">
           Select a Size:
           <select value={form} onChange={(e) => handleSubmit(e)}>

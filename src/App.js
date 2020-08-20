@@ -1,19 +1,24 @@
 import React from "react";
-import Grid from "./components/Grid";
+import { Route, Switch } from "react-router-dom";
 import { Container } from "./styles/mainStyles";
 import "./App.css";
-import Rules from "./components/Rules";
-import Presets from "./components/Presets";
+import GameHistory from "./components/GameHistory";
+import Game from "./components/Game";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Grid />
-        <Container direction={"column"}>
-          <Rules />
-          <Presets />
-        </Container>
+      <Header />
+      <Container justify={"center"} style={{ border: "2px solid green" }}>
+        <Switch>
+          <Route path="/game-history">
+            <GameHistory />
+          </Route>
+          <Route path="/">
+            <Game />
+          </Route>
+        </Switch>
       </Container>
     </div>
   );

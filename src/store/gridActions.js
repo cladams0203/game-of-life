@@ -17,14 +17,14 @@ export const largeBoard = (dispatch) => {
 };
 
 export const extraLargeBoard = (dispatch) => {
-  console.log("fired");
   dispatch({ type: LOADING });
   const createArray = async () => {
     return await Promise.resolve(new Array(40).fill(new Array(40).fill(0)));
   };
-  createArray().then((res) =>
-    dispatch({ type: EXTRA_LARGE_BOARD, payload: res })
-  );
+  createArray().then((res) => {
+    console.log(res);
+    dispatch({ type: EXTRA_LARGE_BOARD, payload: res });
+  });
 };
 
 export const addPreset = (dispatch, grid, preset) => {
