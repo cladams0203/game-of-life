@@ -4,7 +4,7 @@ import { StateProvider } from "react-conflux";
 import { gridReducer } from "./store/gridReducer";
 import { gridContext } from "./store/contexts";
 import { BrowserRouter as Router } from "react-router-dom";
-import "./index.css";
+import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 

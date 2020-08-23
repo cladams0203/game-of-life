@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  padding: 1rem;
+  .links {
+    font-size: 1.5rem;
+  }
+  .links:hover {
+    cursor: pointer;
+  }
+}

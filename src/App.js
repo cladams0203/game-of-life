@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { Container } from "./styles/mainStyles";
-import "./App.css";
+import "./App.scss";
 import GameHistory from "./components/GameHistory";
 import Game from "./components/Game";
 import Header from "./components/Header";
@@ -10,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Container justify={"center"} style={{ border: "2px solid green" }}>
+      <diz className="container" justify={"center"}>
         <Switch>
           <Route path="/game-history">
             <GameHistory />
@@ -19,7 +18,7 @@ function App() {
             <Game />
           </Route>
         </Switch>
-      </Container>
+      </diz>
     </div>
   );
 }

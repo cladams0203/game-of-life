@@ -7,7 +7,7 @@ import {
   RESET_GAME,
   random,
 } from "../store/gridActions";
-
+import "../styles/controls.scss";
 function Controls({ setTimer }) {
   const [state, dispatch] = useStateValue(gridContext);
   const [form, setForm] = useState("normal");
@@ -26,21 +26,23 @@ function Controls({ setTimer }) {
   };
 
   return (
-    <div>
-      <button onClick={() => setTimer(true)}>Start</button>
-      <button onClick={() => setTimer(false)}>Stop</button>
-      <button
-        onClick={() => {
-          setForm("normal");
-          dispatch({ type: RESET_GAME });
-        }}
-      >
-        Reset
-      </button>
-      <button onClick={() => random(dispatch, state.grid)}>Randomize</button>
+    <div className="controls">
+      <div className="button-container">
+        <button onClick={() => setTimer(true)}>Start</button>
+        <button onClick={() => setTimer(false)}>Stop</button>
+        <button
+          onClick={() => {
+            setForm("normal");
+            dispatch({ type: RESET_GAME });
+          }}
+        >
+          Reset
+        </button>
+        <button onClick={() => random(dispatch, state.grid)}>Randomize</button>
+      </div>
       <form>
         <label htmlFor="size">
-          Select a Size:
+          Select a Size:{"  "}
           <select value={form} onChange={(e) => handleSubmit(e)}>
             <option value="normal">Normal</option>
             <option value="large">Large</option>

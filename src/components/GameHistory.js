@@ -1,9 +1,15 @@
 import React from "react";
-import { Container } from "../styles/mainStyles";
+import "../styles/gameHistory.scss";
+
 function GameHistory() {
   return (
-    <Container direction={"column"} width={"70%"} align={"flex-start"}>
-      <h1>Conway's Game of Life History</h1>
+    <div
+      className="about-container"
+      direction={"column"}
+      width={"70%"}
+      align={"flex-start"}
+    >
+      <h2>Conway's Game of Life History</h2>
       <p>
         In late 1940, John von Neumann defined life as a creation (as a being or
         organism) which can reproduce itself and simulate a Turing machine. Von
@@ -93,7 +99,7 @@ function GameHistory() {
         emulations of computer systems within the confines of a Game of Life
         board.
       </p>
-    </Container>
+    </div>
   );
 }
 export default GameHistory;

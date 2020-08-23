@@ -1,0 +1,55 @@
+.App {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: lightgray;
+}
+
+p {
+  text-align: left;
+  margin-top: 20px;
+  color: lightgray;
+}
+
+ul {
+  text-align: left;
+}
+
+li {
+  margin-left: 5%;
+  color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  color: lightgray;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  text-decoration: underline;
+}
+h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+h4 {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}

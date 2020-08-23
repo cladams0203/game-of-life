@@ -2,21 +2,17 @@ import React from "react";
 import { useStateValue } from "react-conflux";
 import { gridContext } from "../store/contexts";
 import { addPreset } from "../store/gridActions";
-import { GridContainer, Container } from "../styles/mainStyles";
 import { scrubberArray, roteightor, r2d2, pulsar } from "../utils/presetArrays";
+import "../styles/presets.scss";
 
 function Presets() {
   const [state, dispatch] = useStateValue(gridContext);
   return (
-    <Container width={"80%"} wrap={"wrap"} style={{ border: "2px solid red" }}>
-      <h2 className="preset-heading">Preset Patterns</h2>
-      <Container
-        direction={"column"}
-        width={"40%"}
-        style={{ border: "2px solid red" }}
-      >
+    <div className="preset-container">
+      <h3 className="preset-heading">Preset Patterns</h3>
+      <div className="presets">
         <h4>Scrubber</h4>
-        <GridContainer>
+        <div className="preset-grid">
           {scrubberArray.map((item, idx1) => {
             return item.map((sub, idx2) => {
               return (
@@ -32,14 +28,14 @@ function Presets() {
               );
             });
           })}
-        </GridContainer>
+        </div>
         <button onClick={() => addPreset(dispatch, state.grid, scrubberArray)}>
           select
         </button>
-      </Container>
-      <Container direction={"column"} width={"40%"}>
+      </div>
+      <div className="presets">
         <h4>Roteightor</h4>
-        <GridContainer>
+        <div className="preset-grid">
           {roteightor.map((item, idx1) => {
             return item.map((sub, idx2) => {
               return (
@@ -55,14 +51,14 @@ function Presets() {
               );
             });
           })}
-        </GridContainer>
+        </div>
         <button onClick={() => addPreset(dispatch, state.grid, roteightor)}>
           select
         </button>
-      </Container>
-      <Container direction={"column"} width={"40%"}>
+      </div>
+      <div className="presets">
         <h4>R2D2</h4>
-        <GridContainer>
+        <div className="preset-grid">
           {r2d2.map((item, idx1) => {
             return item.map((sub, idx2) => {
               return (
@@ -78,14 +74,14 @@ function Presets() {
               );
             });
           })}
-        </GridContainer>
+        </div>
         <button onClick={() => addPreset(dispatch, state.grid, r2d2)}>
           select
         </button>
-      </Container>
-      <Container direction={"column"} width={"40%"}>
+      </div>
+      <div className="presets">
         <h4>Pulsar</h4>
-        <GridContainer>
+        <div className="preset-grid">
           {pulsar.map((item, idx1) => {
             return item.map((sub, idx2) => {
               return (
@@ -101,12 +97,12 @@ function Presets() {
               );
             });
           })}
-        </GridContainer>
+        </div>
         <button onClick={() => addPreset(dispatch, state.grid, pulsar)}>
           select
         </button>
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 }
 

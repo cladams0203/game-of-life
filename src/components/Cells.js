@@ -1,8 +1,7 @@
 import React from "react";
-import { Cell } from "../styles/mainStyles";
 
 function Cells(props) {
-  const { row, col, width, height, pos1, pos2, handleChange, value } = props;
+  const { row, col, pos1, pos2, handleChange, value } = props;
   return (
     <div
       className="cells"
@@ -12,11 +11,6 @@ function Cells(props) {
         gridColumn: col + 1,
         gridRow: row + 1,
       }}
-      // background={value && "yellow"}
-      // height={`${height * 100}px`}
-      // width={`${width * 100}px`}
-      // row={row + 1}
-      // col={col + 1}
     ></div>
   );
 }
