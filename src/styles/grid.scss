@@ -15,6 +15,10 @@
       height: 10px;
       border: solid grey;
       border-width: thin;
+      @media (max-width: 500px) {
+        width: 7px;
+        height: 7px;
+      }
     }
   }
 }

@@ -34,12 +34,18 @@ h1 {
   width: 100%;
   font-size: 3rem;
   color: lightgray;
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
 }
 h2 {
   font-size: 2rem;
   text-align: center;
   width: 100%;
   text-decoration: underline;
+  @media (max-width: 607px) {
+    font-size: 1.5rem;
+  }
 }
 h3 {
   font-size: 1.5rem;

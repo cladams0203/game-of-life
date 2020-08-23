@@ -19,8 +19,12 @@
     flex-direction: column;
     width: 35%;
     align-items: center;
+
     @media (max-width: 800px) {
       width: 24%;
+    }
+    @media (max-width: 600px) {
+      width: 45%;
     }
     .preset-grid {
       box-shadow: 2px 2px 2px black;
@@ -34,6 +38,10 @@
         height: 7px;
         border: solid grey;
         border-width: thin;
+        @media (max-width: 500px) {
+          width: 5px;
+          height: 5px;
+        }
       }
     }
     button {
