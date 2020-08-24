@@ -4,17 +4,20 @@ import {
   RESET_GAME,
   EXTRA_LARGE_BOARD,
   ADD_PRESET,
+  RANDOM,
 } from "./gridActions";
 
 const initialState = {
   grid: new Array(25).fill(new Array(25).fill(0)),
   loading: false,
   error: "",
+  generations: 0,
 };
 
 export const gridReducer = (state = initialState, action) => {
   switch (action.type) {
     case "HANDLE_CHANGE":
+      console.log("hey");
       return {
         ...state,
         grid: state.grid.map((item, idx) => {
@@ -35,6 +38,7 @@ export const gridReducer = (state = initialState, action) => {
       return {
         ...state,
         grid: action.payload,
+        generations: state.generations + 1,
       };
     case RESET_GAME:
       return initialState;
@@ -43,6 +47,7 @@ export const gridReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         grid: action.payload,
+        generations: 0,
       };
     case EXTRA_LARGE_BOARD:
       return {
@@ -59,6 +64,13 @@ export const gridReducer = (state = initialState, action) => {
       return {
         ...state,
         grid: action.payload,
+        loading: false,
+      };
+    case RANDOM:
+      return {
+        ...state,
+        grid: action.payload,
+        loading: false,
       };
     default:
       return state;

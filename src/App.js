@@ -1,20 +1,24 @@
 import React from "react";
-import Grid from "./components/Grid";
-import { Container } from "./styles/mainStyles";
-import "./App.css";
-import Rules from "./components/Rules";
-import Presets from "./components/Presets";
+import { Route, Switch } from "react-router-dom";
+import "./App.scss";
+import GameHistory from "./components/GameHistory";
+import Game from "./components/Game";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Grid />
-        <Container direction={"column"}>
-          <Rules />
-          <Presets />
-        </Container>
-      </Container>
+      <Header />
+      <diz className="container" justify={"center"}>
+        <Switch>
+          <Route path="/game-history">
+            <GameHistory />
+          </Route>
+          <Route path="/">
+            <Game />
+          </Route>
+        </Switch>
+      </diz>
     </div>
   );
 }

@@ -1,0 +1,34 @@
+.controls {
+  margin-top: 10px;
+  width: 50%;
+
+  form {
+    margin-top: 10px;
+    label {
+      color: lightgray;
+    }
+    select {
+      background-color: #b58516;
+      box-shadow: 2px 2px 2px black;
+      &:hover {
+        background-color: black;
+        color: #b58516;
+      }
+    }
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+    button {
+      background-color: #b58516;
+      border-radius: 0.5rem;
+      box-shadow: 2px 2px 2px black;
+      &:hover {
+        background-color: black;
+        color: #b58516;
+      }
+    }
+  }
+}

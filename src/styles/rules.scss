@@ -1,0 +1,14 @@
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+  ol {
+    width: 100%;
+    text-align: left;
+  }
+  li {
+    width: 100%;
+  }
+}

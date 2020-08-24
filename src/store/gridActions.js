@@ -6,6 +6,7 @@ export const EXTRA_LARGE_BOARD = "EXTRA_LARGE_BOARD";
 export const LOADING = "LOADING";
 export const ERROR = "ERROR";
 export const ADD_PRESET = "ADD_PRESET";
+export const RANDOM = "RANDOM";
 
 export const largeBoard = (dispatch) => {
   dispatch({ type: LOADING });
@@ -16,14 +17,14 @@ export const largeBoard = (dispatch) => {
 };
 
 export const extraLargeBoard = (dispatch) => {
-  console.log("fired");
   dispatch({ type: LOADING });
   const createArray = async () => {
     return await Promise.resolve(new Array(40).fill(new Array(40).fill(0)));
   };
-  createArray().then((res) =>
-    dispatch({ type: EXTRA_LARGE_BOARD, payload: res })
-  );
+  createArray().then((res) => {
+    console.log(res);
+    dispatch({ type: EXTRA_LARGE_BOARD, payload: res });
+  });
 };
 
 export const addPreset = (dispatch, grid, preset) => {
@@ -38,4 +39,14 @@ export const addPreset = (dispatch, grid, preset) => {
     return front.concat(item, back);
   });
   dispatch({ type: ADD_PRESET, payload: sub.concat(newPreset, sub2) });
+};
+
+export const random = (dispatch, grid) => {
+  dispatch({ type: LOADING });
+  const newGrid = grid.map((item) => {
+    return item.map((sub) => {
+      return Math.round(Math.random());
+    });
+  });
+  dispatch({ type: RANDOM, payload: newGrid });
 };

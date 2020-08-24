@@ -3,14 +3,17 @@ import ReactDOM from "react-dom";
 import { StateProvider } from "react-conflux";
 import { gridReducer } from "./store/gridReducer";
 import { gridContext } from "./store/contexts";
-import "./index.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <StateProvider reducer={gridReducer} stateContext={gridContext}>
     <React.StrictMode>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </React.StrictMode>
   </StateProvider>,
   document.getElementById("root")
