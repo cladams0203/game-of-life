@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <diz className="container" justify={"center"}>
+      <div className="container" justify={"center"}>
         <Switch>
           <Route path="/game-history">
             <GameHistory />
@@ -18,7 +18,7 @@ function App() {
             <Game />
           </Route>
         </Switch>
-      </diz>
+      </div>
     </div>
   );
 }

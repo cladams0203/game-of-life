@@ -13,6 +13,7 @@
       &:hover {
         background-color: black;
         color: #b58516;
+        cursor: pointer;
       }
     }
   }
@@ -28,7 +29,27 @@
       &:hover {
         background-color: black;
         color: #b58516;
+        cursor: pointer;
       }
     }
+  }
+}
+.speed-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  margin: 5px;
+  .arrows {
+    width: 20px;
+    background-color: #b58516;
+    &:hover {
+      background-color: black;
+      color: #b58516;
+      cursor: pointer;
+    }
+  }
+  .speed-label {
+    color: lightgray;
+    font-size: 1.2rem;
   }
 }
