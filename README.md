@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Conway's Game of Life
 
-## Available Scripts
+## Game Rules
 
-In the project directory, you can run:
+```
+1.  If a cell is "alive" and has 2-3 neighbors it remains alive. Else it dies.
+2. If a cell is "dead" and has exactly 3 neighbors, then it comes to life. Else it dies.
+```
 
-### `npm start`
+## How to play
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+1.  Select board size.
+  A. default is 25 x 25
+  B. Large is 30 x 30
+  C. Extra large is 40 x 40
+2.  Add cells.
+  A. Select cells on the board individually.
+  B. Select Randomize for a random board configuration.
+  C. Choose one of the preset configurations.
+3. Click start to run the simulation.
+  A. You can stop the simulation by clicking the Stop button.
+  B.  After you stop the simulation you can click Reset to reset the board and start over.
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Board Layout Description
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The Game board is large board on the screen. The ammount of generations run is labeled on the top of the board. Prest configurations are labeled with a visual description of the preset. Controls for the game are at the bottom of the game board. The rules of the game ar at the bottom. There are also links in the navigation at the top of the page that take you too a page that tells you the history of the game and back home to the game board. The game is designed to work on devices of all screen widths incuding mobile phones and tablets.

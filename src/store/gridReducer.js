@@ -5,6 +5,8 @@ import {
   EXTRA_LARGE_BOARD,
   ADD_PRESET,
   RANDOM,
+  FASTER,
+  SLOWER,
 } from "./gridActions";
 
 const initialState = {
@@ -12,6 +14,7 @@ const initialState = {
   loading: false,
   error: "",
   generations: 0,
+  speed: 300,
 };
 
 export const gridReducer = (state = initialState, action) => {
@@ -71,6 +74,16 @@ export const gridReducer = (state = initialState, action) => {
         ...state,
         grid: action.payload,
         loading: false,
+      };
+    case FASTER:
+      return {
+        ...state,
+        speed: state.speed - 50,
+      };
+    case SLOWER:
+      return {
+        ...state,
+        speed: state.speed + 50,
       };
     default:
       return state;

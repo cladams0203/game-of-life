@@ -7,6 +7,8 @@ export const LOADING = "LOADING";
 export const ERROR = "ERROR";
 export const ADD_PRESET = "ADD_PRESET";
 export const RANDOM = "RANDOM";
+export const FASTER = "FASTER";
+export const SLOWER = "SLOWER";
 
 export const largeBoard = (dispatch) => {
   dispatch({ type: LOADING });
